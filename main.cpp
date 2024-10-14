@@ -1,12 +1,15 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 int main()
 {
     int score;
     cout << "\nEnter score: " << endl;
     cin >> score;
+    system("cls");
+    cout << "Stone Paper Scissor Game" << endl;
     const int num = 3;
     int computer_score = 0;
     int user_score = 0;
@@ -62,8 +65,14 @@ int main()
             cout << "Computer Score is: " << computer_score << endl;
             cout << "User Score is: " << user_score << endl;
         }
+        Sleep(1500);
+        system("cls");
     }
-    if (computer_score == 5)
+    Sleep(2000);
+    system("cls");
+    cout << "The winner is: " << endl;
+
+    if (computer_score == score)
     {
         cout << "Computer is winner" << endl;
     }
