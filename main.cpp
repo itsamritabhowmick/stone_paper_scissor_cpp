@@ -5,20 +5,21 @@ using namespace std;
 int main()
 {
     int score;
-    cout<<"\nEnter score: "<<endl;
-    cin>>score;
+    cout << "\nEnter score: " << endl;
+    cin >> score;
     const int num = 3;
     int computer_score = 0;
     int user_score = 0;
     int user_input;
     int computer_input;
-    while(computer_score<score && user_score<score)
+    while (computer_score < score && user_score < score)
     {
         cout << "\nEnter input number for user:";
         cin >> user_input;
         srand(time(0));
         computer_input = rand();
         computer_input = (computer_input % num) + 1;
+        cout << "Computer input is: " << computer_input << endl;
         if (user_input == computer_input)
         {
             cout << "Draw" << endl;
@@ -62,11 +63,13 @@ int main()
             cout << "User Score is: " << user_score << endl;
         }
     }
-    if(computer_score==5){
-        cout<<"Computer is winner"<<endl;
+    if (computer_score == 5)
+    {
+        cout << "Computer is winner" << endl;
     }
-    else{
-        cout<<"User is winner"<<endl;
+    else
+    {
+        cout << "User is winner" << endl;
     }
     return 0;
 }
